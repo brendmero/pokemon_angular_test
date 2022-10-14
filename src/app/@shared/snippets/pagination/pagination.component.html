@@ -1,0 +1,32 @@
+<div class="app-pagination">
+  <span class="page-chip" (click)="goToPrev()">‹</span>
+  <span
+    class="page-chip"
+    (click)="selectPage(1)"
+    [class.active]="this.currentPage === 1"
+  >
+    1
+  </span>
+  <span class="dots" *ngIf="totalPage > 5 && currentPage >= 4">
+    ...
+  </span>
+  <span
+    *ngFor="let item of middleItems"
+    class="page-chip"
+    [class.active]="this.currentPage === item"
+    (click)="selectPage(item)"
+  >
+    {{ item }}
+  </span>
+  <span class="dots" *ngIf="totalPage > 5 && currentPage <= totalPage - 4">
+    ...
+  </span>
+  <span
+    class="page-chip"
+    (click)="selectPage(totalPage)"
+    [class.active]="this.currentPage === totalPage"
+  >
+    {{ totalPage }}
+  </span>
+  <span class="page-chip" (click)="goToNext()">›</span>
+</div>

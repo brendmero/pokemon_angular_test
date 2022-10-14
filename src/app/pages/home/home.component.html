@@ -1,0 +1,20 @@
+<div class="app-home">
+  <div class="container" *ngIf="data.results">
+    <div class="header">
+      <h3 class="count">Total: {{ data.count }}</h3>
+      <app-pagination
+        [totalPage]="totalPage"
+        [currentPage]="currentPage"
+        (changePage)="changePage($event)"
+      ></app-pagination>
+    </div>
+    <div class="table-wrapper">
+      <app-table [data]="data.results"></app-table>
+    </div>
+    <app-pagination
+      [totalPage]="totalPage"
+      [currentPage]="currentPage"
+      (changePage)="changePage($event)"
+    ></app-pagination>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+table {
+  border-collapse: collapse;
+  border-radius:6px;
+  width: 100%;
+  min-width: 700px;
+
+  tr {
+    border-top: 1px solid #064683;
+  }
+
+  thead {
+    th {
+      background-color: #002952;
+      border-top: none;
+      padding: 10px 20px;
+      text-align: left;
+    }
+  }
+
+  td:first-child, th:first-child {
+    border-left: none;
+  }
+
+  td {
+    padding: 10px 20px;
+  }
+
+  .id {
+    width: 80px;
+  }
+
+  .name {
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+
+  .image {
+    width: 200px;
+
+    .image-wrapper {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #002952;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .action {
+    width: 100px;
+    text-align: center !important;
+  }
+
+  tbody {
+    td {
+      background-color: #001E3C;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.app-detail {
+  .header {
+    padding: 40px 0;
+  }
+
+  .content {
+    display: flex;
+
+    .image-wrapper {
+      width: 400px;
+      margin-right: 80px;
+      background-color: #001E3C;
+      border-radius: 16px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .information {
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      .counters {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 40px;
+        .info-chip {
+          width: 140px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 765px) {
+      flex-direction: column;
+
+      .image-wrapper {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    @media screen and (max-width: 576px) {
+      .image-wrapper {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<div class="app-detail">
+  <div class="container">
+    <div class="header">
+      <button (click)="goToHome()">
+        Back
+      </button>
+    </div>
+
+    <div class="content" *ngIf="data.id">
+      <div class="image-wrapper">
+        <img [src]="getImageUrl(data.id)" alt="avatar" />
+      </div>
+      <div class="information">
+        <h1>Id: #{{ data.id }}</h1>
+        <p>Weight: {{ data.weight }}</p>
+        <p>Height: {{ data.height }}</p>
+        <p>Experience: {{ data.height }}</p>
+
+        <div class="counters">
+          <div class="info-chip">
+            <p>
+              Abilities
+            </p>
+            <h2>{{ data.abilities ? data.abilities.length : 0 }}</h2>
+          </div>
+          <div class="info-chip">
+            <p>
+              Forms
+            </p>
+            <h2>{{ data.forms ? data.forms.length : 0 }}</h2>
+          </div>
+          <div class="info-chip">
+            <p>
+              Game Indices
+            </p>
+            <h2>{{ data.game_indices ? data.game_indices.length : 0 }}</h2>
+          </div>
+          <div class="info-chip">
+            <p>
+              Held Items
+            </p>
+            <h2>{{ data.held_items ? data.held_items.length : 0 }}</h2>
+          </div>
+          <div class="info-chip">
+            <p>
+              Moves
+            </p>
+            <h2>{{ data.moves ? data.moves.length : 0 }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

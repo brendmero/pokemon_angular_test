@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Url</th>
+      <th class="action">View</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td class="id">{{ getId(row.url) }}</td>
+      <td class="image">
+        <div class="image-wrapper">
+          <img [src]="getImageUrl(row.url)" [alt]="row.name" />
+        </div>
+      </td>
+      <td class="name">{{ row.name }}</td>
+      <td>{{ row.url }}</td>
+      <td class="action">
+        <button (click)="goToDetailPage(row.url)">
+          View
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  color: white;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #0A1929;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+button {
+  background-color: #3399FF;
+  color: white;
+  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  &:hover {
+    cursor: pointer;
+    background-color: #217cd7;
+  }
+}
